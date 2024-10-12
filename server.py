@@ -11,7 +11,10 @@ def index():
 def submit():
     first_name = request.form['fname']
     last_name = request.form['lname']
-    return render_template('success.html', first_name=first_name, last_name=last_name)
+    email = request.form['Email']
+    number = request.form['phone']
+
+    return render_template('success.html', first_name=first_name, last_name=last_name,email=email,number=number)
 
 if __name__ == '__main__':
     app.run(debug=True)
