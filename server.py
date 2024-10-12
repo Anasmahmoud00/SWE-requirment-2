@@ -1,5 +1,4 @@
-
-from server import Flask, render_template, request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -14,7 +13,7 @@ def submit():
     email = request.form['Email']
     number = request.form['phone']
 
-    return render_template('success.html', first_name=first_name, last_name=last_name,email=email,number=number)
+    return render_template('success.html', first_name=first_name, last_name=last_name, email=email, number=number)
 
 if __name__ == '__main__':
     app.run(debug=True)

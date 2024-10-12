@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Greeting</title>
-    <link rel="stylesheet" href="/Task3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Task3.css') }}">
+
 </head>
 <body>
     <h1>Fill Form</h1>
-    <form method="POST" action="/success.html">
+    <!-- Make sure the action submits to /submit, not to success.html -->
+    <form method="POST" action="/submit">
         <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" ><br>
+        <input type="text" id="fname" name="fname" required><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" ><br><br>
+        <input type="text" id="lname" name="lname" required><br><br>
         <label for="phone">Phone number:</label><br>
-        <input type="text" id="phone" name="phone" ><br><br>
+        <input type="text" id="phone" name="phone" required><br><br>
         <label for="Email">Enter Email:</label><br>
-        <input type="text" id="Email" name="Email" ><br><br>
+        <input type="email" id="Email" name="Email" required><br><br>
         <input type="submit" value="Submit">
-        
     </form>
 </body>
-
 </html>
